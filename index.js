@@ -6,7 +6,7 @@ const morgan = require('morgan')
 
 const route = require('./src/index')
 
-const server = app.listen(process.env.PORT || 3306, () => {
+const server = app.listen(process.env.PORT || 5000, () => {
   const host = server.address().address
   const port = server.address().port
 

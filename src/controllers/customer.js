@@ -1,4 +1,4 @@
-const userModel = require('../models/user')
+const userModel = require('../models/customer')
 const qs = require('querystring')
 const moment = require('moment')
 const jwt = require('jsonwebtoken')
@@ -88,7 +88,6 @@ module.exports = {
           name,
           email,
           password: bcrypt.hashSync(request.body.password, saltRounds),
-          created_at: moment().format('LLLL')
         }
         const result = await userModel.createUser(userData)
         if (result) {
